@@ -124,11 +124,10 @@ const Home: React.FC = () => {
         ) : (
           <div className="space-y-8">
             <section className="text-center py-12">
-              <h1 className="text-4xl font-bold mb-4">Pelaporan Lampu Jalan</h1>
+              <h1 className="text-4xl font-bold mb-4">Pelaporan Lampu Jalan Dishub Kota Palembang</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
                 Bantu jaga keamanan komunitas Anda dengan melaporkan masalah
-                pada lampu jalan. Pantau status laporan Anda dan dapatkan
-                notifikasi saat masalah teratasi.
+                pada lampu jalan.
               </p>
               <div className="flex justify-center gap-4">
                 <Button
@@ -136,7 +135,7 @@ const Home: React.FC = () => {
                   onClick={handleRegister}
                   className="bg-primary text-white hover:bg-primary/90 px-8"
                 >
-                  Mulai
+                  Laporkan Lampu Bermasalah
                 </Button>
                 <Button
                   size="lg"
