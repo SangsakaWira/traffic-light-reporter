@@ -8,7 +8,7 @@ interface LogoProps {
 const Logo = ({ className = "", showText = true }: LogoProps) => {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <img src="/logo.svg" alt="LAPORPJU Logo" className="h-8 w-auto" />
+      <img src="/logo.png" alt="LAPORPJU Logo" className="h-8 w-auto" />
       {showText && <span className="font-bold text-lg">LAPORPJU</span>}
     </div>
   );

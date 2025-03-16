@@ -34,15 +34,15 @@ const Header = ({
   isDarkTheme = false,
 }: HeaderProps) => {
   return (
-    <header className="w-full h-16 bg-background border-b border-border flex items-center justify-between px-4 md:px-6 sticky top-0 z-50">
+    <header className="w-full h-20 bg-background border-b border-border flex items-center justify-between px-4 md:px-6 sticky top-0 z-50">
       <div className="flex items-center gap-2">
         <Link to="/" className="flex items-center gap-2">
           <img
-            src="https://api.dicebear.com/7.x/avataaars/svg?seed=LAPORPJU"
+            src="/logo.png"
             alt="LAPORPJU Logo"
-            className="h-8 w-auto"
+            className="h-16 w-auto my-6 inline"
           />
-          <span className="font-bold text-lg hidden md:inline">LAPORPJU</span>
+          {/* <span className="font-bold text-lg hidden md:inline">LAPORPJU</span> */}
         </Link>
       </div>
 
@@ -65,6 +65,12 @@ const Header = ({
           className="text-sm font-medium hover:text-primary transition-colors"
         >
           Bantuan
+        </Link>
+        <Link
+          to="/"
+          className="text-sm font-medium hover:text-primary transition-colors"
+        >
+          Cari
         </Link>
         {isAuthenticated && (
           <Link
