@@ -35,12 +35,12 @@ const Dashboard: React.FC<DashboardProps> = ({
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold">Dashboard</h1>
-            <p className="text-gray-500">Welcome back, {userName}</p>
+            <h1 className="text-2xl font-bold">Dasbor</h1>
+            <p className="text-gray-500">Selamat datang kembali, {userName}</p>
           </div>
           <Button onClick={onViewMap} className="flex items-center gap-2">
             <MapPin className="h-4 w-4" />
-            View Map
+            Lihat Peta
           </Button>
         </div>
 
@@ -49,39 +49,39 @@ const Dashboard: React.FC<DashboardProps> = ({
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-gray-500">
-                Active Reports
+                Laporan Aktif
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold">{activeReports}</div>
               <p className="text-xs text-gray-500 mt-1">
-                Reports currently being processed
+                Laporan yang sedang diproses
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-gray-500">
-                Resolved Reports
+                Laporan Terselesaikan
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold">{resolvedReports}</div>
               <p className="text-xs text-gray-500 mt-1">
-                Successfully completed reports
+                Laporan yang berhasil diselesaikan
               </p>
             </CardContent>
           </Card>
           <Card>
             <CardHeader className="pb-2">
               <CardTitle className="text-sm font-medium text-gray-500">
-                Pending Reports
+                Laporan Tertunda
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="text-3xl font-bold">{pendingReports}</div>
               <p className="text-xs text-gray-500 mt-1">
-                Reports awaiting initial review
+                Laporan yang menunggu peninjauan awal
               </p>
             </CardContent>
           </Card>
@@ -97,30 +97,31 @@ const Dashboard: React.FC<DashboardProps> = ({
           <TabsList className="grid grid-cols-3 md:w-[400px] mb-4">
             <TabsTrigger value="overview" className="flex items-center gap-2">
               <History className="h-4 w-4" />
-              <span className="hidden sm:inline">Report History</span>
-              <span className="sm:hidden">History</span>
+              <span className="hidden sm:inline">Riwayat Laporan</span>
+              <span className="sm:hidden">Riwayat</span>
             </TabsTrigger>
             <TabsTrigger
               value="notifications"
               className="flex items-center gap-2"
             >
               <Bell className="h-4 w-4" />
-              <span className="hidden sm:inline">Notifications</span>
-              <span className="sm:hidden">Alerts</span>
+              <span className="hidden sm:inline">Notifikasi</span>
+              <span className="sm:hidden">Peringatan</span>
             </TabsTrigger>
             <TabsTrigger value="settings" className="flex items-center gap-2">
               <Settings className="h-4 w-4" />
-              <span className="hidden sm:inline">Settings</span>
-              <span className="sm:hidden">Settings</span>
+              <span className="hidden sm:inline">Pengaturan</span>
+              <span className="sm:hidden">Pengaturan</span>
             </TabsTrigger>
           </TabsList>
 
           <TabsContent value="overview" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>Your Report History</CardTitle>
+                <CardTitle>Riwayat Laporan Anda</CardTitle>
                 <CardDescription>
-                  View and manage all your submitted street light reports.
+                  Lihat dan kelola semua laporan lampu jalan yang telah Anda
+                  kirimkan.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -132,10 +133,10 @@ const Dashboard: React.FC<DashboardProps> = ({
           <TabsContent value="notifications" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>Notifications</CardTitle>
+                <CardTitle>Notifikasi</CardTitle>
                 <CardDescription>
-                  Stay updated on the status of your reports and system
-                  announcements.
+                  Tetap mendapatkan informasi terbaru tentang status laporan
+                  Anda dan pengumuman sistem.
                 </CardDescription>
               </CardHeader>
               <CardContent>
@@ -147,15 +148,15 @@ const Dashboard: React.FC<DashboardProps> = ({
           <TabsContent value="settings" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>Account Settings</CardTitle>
+                <CardTitle>Pengaturan Akun</CardTitle>
                 <CardDescription>
-                  Manage your account preferences and notification settings.
+                  Kelola preferensi akun dan pengaturan notifikasi Anda.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="p-4 bg-gray-100 rounded-md text-center">
                   <p className="text-gray-500">
-                    Settings panel is under development
+                    Panel pengaturan sedang dalam pengembangan
                   </p>
                 </div>
               </CardContent>

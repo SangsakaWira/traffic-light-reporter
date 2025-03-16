@@ -44,7 +44,7 @@ const MapControls = ({
         <div className="relative">
           <Input
             type="text"
-            placeholder="Search by address or ID"
+            placeholder="Cari berdasarkan alamat atau ID"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="pl-9 w-full"
@@ -52,21 +52,21 @@ const MapControls = ({
           <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
         </div>
         <Button type="submit" className="w-full">
-          Search
+          Cari
         </Button>
       </form>
 
       <div className="space-y-2">
-        <p className="text-sm font-medium">Filter Lights</p>
+        <p className="text-sm font-medium">Filter Lampu</p>
         <Select value={filterValue} onValueChange={handleFilterChange}>
           <SelectTrigger>
-            <SelectValue placeholder="Filter by status" />
+            <SelectValue placeholder="Filter berdasarkan status" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="all">All Lights</SelectItem>
-            <SelectItem value="working">Working</SelectItem>
-            <SelectItem value="reported">Reported Issues</SelectItem>
-            <SelectItem value="maintenance">Under Maintenance</SelectItem>
+            <SelectItem value="all">Semua Lampu</SelectItem>
+            <SelectItem value="working">Berfungsi</SelectItem>
+            <SelectItem value="reported">Masalah Dilaporkan</SelectItem>
+            <SelectItem value="maintenance">Dalam Perbaikan</SelectItem>
           </SelectContent>
         </Select>
       </div>
@@ -108,7 +108,7 @@ const MapControls = ({
           onClick={onUseCurrentLocation}
         >
           <MapPin className="mr-2 h-4 w-4" />
-          Use My Location
+          Gunakan Lokasi Saya
         </Button>
       </div>
     </div>

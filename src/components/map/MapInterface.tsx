@@ -164,19 +164,19 @@ const MapInterface = ({
 
         {/* Map legend */}
         <Card className="absolute bottom-4 right-4 p-3 z-10 bg-white/90 backdrop-blur-sm">
-          <div className="text-sm font-medium mb-2">Map Legend</div>
+          <div className="text-sm font-medium mb-2">Legenda Peta</div>
           <div className="flex flex-col gap-2">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded-full bg-green-500 ring-2 ring-green-300"></div>
-              <span className="text-xs">Working</span>
+              <span className="text-xs">Berfungsi</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded-full bg-amber-500 ring-2 ring-amber-300"></div>
-              <span className="text-xs">Issue Reported</span>
+              <span className="text-xs">Masalah Dilaporkan</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded-full bg-blue-500 ring-2 ring-blue-300"></div>
-              <span className="text-xs">Under Maintenance</span>
+              <span className="text-xs">Dalam Perbaikan</span>
             </div>
           </div>
         </Card>
@@ -185,7 +185,7 @@ const MapInterface = ({
         <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
           <Badge variant="outline" className="bg-white/80 backdrop-blur-sm">
             <MapPin className="w-3 h-3 mr-1" />
-            {filteredLights.length} lights visible
+            {filteredLights.length} lampu terlihat
           </Badge>
 
           {selectedFilter !== "all" && (
@@ -201,7 +201,7 @@ const MapInterface = ({
           <div className="absolute inset-0 bg-black/20 backdrop-blur-sm flex items-center justify-center z-20">
             <Card className="p-4 flex items-center gap-3">
               <div className="w-5 h-5 border-2 border-t-transparent border-blue-500 rounded-full animate-spin"></div>
-              <span>Loading map data...</span>
+              <span>Memuat data peta...</span>
             </Card>
           </div>
         )}
@@ -213,7 +213,7 @@ const MapInterface = ({
           onClick={() => onLightSelect("new")}
         >
           <AlertTriangle className="w-4 h-4 mr-2" />
-          Report New Issue
+          Laporkan Masalah Baru
         </Button>
 
         {/* Map attribution */}

@@ -113,10 +113,10 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({
     <div className="bg-white rounded-lg shadow-md w-full max-w-md border border-gray-200">
       <div className="p-4 border-b border-gray-200 flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <h3 className="font-semibold text-lg">Notifications</h3>
+          <h3 className="font-semibold text-lg">Notifikasi</h3>
           {unreadCount > 0 && (
             <Badge variant="secondary" className="bg-blue-100 text-blue-800">
-              {unreadCount} new
+              {unreadCount} baru
             </Badge>
           )}
         </div>
@@ -126,7 +126,7 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({
           onClick={onMarkAllAsRead}
           className="text-sm text-gray-600 hover:text-gray-900"
         >
-          Mark all as read
+          Tandai semua telah dibaca
         </Button>
       </div>
 
@@ -172,7 +172,7 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({
                         className="text-xs text-blue-600 hover:text-blue-800 h-6 px-2"
                         onClick={() => onMarkAsRead(notification.id)}
                       >
-                        Mark as read
+                        Tandai telah dibaca
                       </Button>
                     )}
                   </div>
@@ -184,10 +184,10 @@ const NotificationCenter: React.FC<NotificationCenterProps> = ({
           <div className="flex flex-col items-center justify-center h-full p-6 text-center">
             <Bell className="h-12 w-12 text-gray-300 mb-2" />
             <h4 className="text-lg font-medium text-gray-900">
-              No notifications
+              Tidak ada notifikasi
             </h4>
             <p className="text-sm text-gray-500 mt-1">
-              You don't have any notifications at the moment.
+              Anda tidak memiliki notifikasi saat ini.
             </p>
           </div>
         )}

@@ -101,11 +101,11 @@ const Home: React.FC = () => {
         ) : (
           <div className="space-y-8">
             <section className="text-center py-12">
-              <h1 className="text-4xl font-bold mb-4">Street Light Reporter</h1>
+              <h1 className="text-4xl font-bold mb-4">Pelaporan Lampu Jalan</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-                Help keep your community safe by reporting issues with street
-                lights. Track the status of your reports and get notified when
-                they're resolved.
+                Bantu jaga keamanan komunitas Anda dengan melaporkan masalah
+                pada lampu jalan. Pantau status laporan Anda dan dapatkan
+                notifikasi saat masalah teratasi.
               </p>
               <div className="flex justify-center gap-4">
                 <Button
@@ -113,7 +113,7 @@ const Home: React.FC = () => {
                   onClick={handleRegister}
                   className="bg-primary text-white hover:bg-primary/90 px-8"
                 >
-                  Get Started
+                  Mulai
                 </Button>
                 <Button
                   size="lg"
@@ -122,7 +122,7 @@ const Home: React.FC = () => {
                     window.scrollTo({ top: 500, behavior: "smooth" })
                   }
                 >
-                  View Map
+                  Lihat Peta
                 </Button>
               </div>
             </section>
@@ -130,34 +130,35 @@ const Home: React.FC = () => {
             <MapInterface onLightSelect={handleLightSelect} />
 
             <section className="py-12 text-center">
-              <h2 className="text-3xl font-bold mb-6">How It Works</h2>
+              <h2 className="text-3xl font-bold mb-6">Cara Kerjanya</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
                 <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <MapPin className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Locate</h3>
+                  <h3 className="text-xl font-semibold mb-2">Temukan</h3>
                   <p className="text-muted-foreground text-center">
-                    Find the street light on the map or use your current
-                    location.
+                    Temukan lampu jalan di peta atau gunakan lokasi Anda saat
+                    ini.
                   </p>
                 </div>
                 <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <AlertTriangle className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Report</h3>
+                  <h3 className="text-xl font-semibold mb-2">Laporkan</h3>
                   <p className="text-muted-foreground text-center">
-                    Submit details about the issue with optional photo evidence.
+                    Kirim detail tentang masalah dengan bukti foto opsional.
                   </p>
                 </div>
                 <div className="flex flex-col items-center p-6 bg-card rounded-lg shadow-sm">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                     <Bell className="h-6 w-6 text-primary" />
                   </div>
-                  <h3 className="text-xl font-semibold mb-2">Track</h3>
+                  <h3 className="text-xl font-semibold mb-2">Pantau</h3>
                   <p className="text-muted-foreground text-center">
-                    Receive updates as your report is processed and resolved.
+                    Terima pembaruan saat laporan Anda diproses dan
+                    diselesaikan.
                   </p>
                 </div>
               </div>
@@ -182,9 +183,9 @@ const Home: React.FC = () => {
 
       <footer className="bg-muted py-6 mt-12">
         <div className="container mx-auto px-4 text-center text-sm text-muted-foreground">
-          <p>© 2023 Street Light Reporter. All rights reserved.</p>
+          <p>© 2023 Pelaporan Lampu Jalan. Seluruh hak cipta dilindungi.</p>
           <p className="mt-2">
-            A community service project for safer neighborhoods.
+            Proyek layanan masyarakat untuk lingkungan yang lebih aman.
           </p>
         </div>
       </footer>

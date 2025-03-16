@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Yellow Light Bulb Circle -->
+  <circle cx="120" cy="140" r="70" fill="#FFCC33" />
+  
+  <!-- Purple Ring -->
+  <path d="M120 70 A70 70 0 1 0 120 210 A70 70 0 1 0 120 70 Z M120 90 A50 50 0 1 1 120 190 A50 50 0 1 1 120 90 Z" fill="#2D2165" />
+  
+  <!-- Base of Light Bulb -->
+  <rect x="100" y="210" width="40" height="10" fill="#2D2165" />
+  <rect x="90" y="220" width="60" height="10" fill="#2D2165" />
+  <rect x="80" y="230" width="80" height="10" fill="#2D2165" />
+  
+  <!-- Text -->
+  <text x="200" y="140" font-family="Arial" font-weight="bold" font-size="60" fill="#2D2165">LAPORPJU</text>
+  
+  <!-- Oleh: Text -->
+  <text x="650" y="225" font-family="Arial" font-weight="bold" font-size="30" fill="#2D2165">Oleh:</text>
+  
+  <!-- Dinas Perhubungan Text -->
+  <text x="850" y="210" font-family="Arial" font-weight="bold" font-size="20" fill="#000">Dinas Perhubungan</text>
+  <text x="850" y="240" font-family="Arial" font-weight="bold" font-size="20" fill="#000">Kota Palembang</text>
+</svg>

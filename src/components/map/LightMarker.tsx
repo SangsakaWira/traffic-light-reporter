@@ -22,21 +22,21 @@ const statusConfig = {
     color: "bg-green-500",
     hoverColor: "hover:bg-green-600",
     ringColor: "ring-green-300",
-    label: "Working",
+    label: "Berfungsi",
     badgeVariant: "success",
   },
   reported: {
     color: "bg-amber-500",
     hoverColor: "hover:bg-amber-600",
     ringColor: "ring-amber-300",
-    label: "Issue Reported",
+    label: "Masalah Dilaporkan",
     badgeVariant: "warning",
   },
   maintenance: {
     color: "bg-blue-500",
     hoverColor: "hover:bg-blue-600",
     ringColor: "ring-blue-300",
-    label: "Under Maintenance",
+    label: "Dalam Perbaikan",
     badgeVariant: "secondary",
   },
 };
@@ -83,14 +83,14 @@ const LightMarker = ({
               </div>
               {lastReported && status !== "working" && (
                 <div className="text-xs text-gray-500">
-                  Reported: {new Date(lastReported).toLocaleDateString()}
+                  Dilaporkan: {new Date(lastReported).toLocaleDateString()}
                 </div>
               )}
               <div className="text-xs text-gray-500 mt-1">
-                Location: {position.lat.toFixed(4)}, {position.lng.toFixed(4)}
+                Lokasi: {position.lat.toFixed(4)}, {position.lng.toFixed(4)}
               </div>
               <div className="text-xs text-blue-600 mt-1 font-medium">
-                Click to report an issue
+                Klik untuk melaporkan masalah
               </div>
             </div>
           </TooltipContent>

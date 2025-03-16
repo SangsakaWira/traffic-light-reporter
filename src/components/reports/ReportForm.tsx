@@ -97,10 +97,11 @@ const ReportForm = ({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="sm:max-w-[500px] bg-white">
         <DialogHeader>
-          <DialogTitle>Report Street Light Issue</DialogTitle>
+          <DialogTitle>Laporkan Masalah Lampu Jalan</DialogTitle>
           <DialogDescription>
-            Please provide details about the street light issue you've observed.
-            Your report will help maintain public safety in your community.
+            Harap berikan detail tentang masalah lampu jalan yang Anda amati.
+            Laporan Anda akan membantu menjaga keamanan publik di komunitas
+            Anda.
           </DialogDescription>
         </DialogHeader>
 
@@ -114,15 +115,15 @@ const ReportForm = ({
               name="lightId"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Light ID</FormLabel>
+                  <FormLabel>ID Lampu</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder="Enter the street light ID (e.g., SL-12345)"
+                      placeholder="Masukkan ID lampu jalan (mis., SL-12345)"
                       {...field}
                     />
                   </FormControl>
                   <FormDescription>
-                    The ID is usually located on the pole of the street light.
+                    ID biasanya terletak pada tiang lampu jalan.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -134,30 +135,28 @@ const ReportForm = ({
               name="issueType"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Issue Type</FormLabel>
+                  <FormLabel>Jenis Masalah</FormLabel>
                   <Select
                     onValueChange={field.onChange}
                     defaultValue={field.value}
                   >
                     <FormControl>
                       <SelectTrigger>
-                        <SelectValue placeholder="Select the type of issue" />
+                        <SelectValue placeholder="Pilih jenis masalah" />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
                       <SelectItem value="not_working">
-                        Light Not Working
+                        Lampu Tidak Berfungsi
                       </SelectItem>
-                      <SelectItem value="flickering">
-                        Light Flickering
-                      </SelectItem>
+                      <SelectItem value="flickering">Lampu Berkedip</SelectItem>
                       <SelectItem value="damaged">
-                        Pole or Fixture Damaged
+                        Tiang atau Perlengkapan Rusak
                       </SelectItem>
                       <SelectItem value="exposed_wires">
-                        Exposed Wires
+                        Kabel Terekspos
                       </SelectItem>
-                      <SelectItem value="other">Other Issue</SelectItem>
+                      <SelectItem value="other">Masalah Lainnya</SelectItem>
                     </SelectContent>
                   </Select>
                   <FormMessage />
@@ -170,10 +169,10 @@ const ReportForm = ({
               name="description"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Description</FormLabel>
+                  <FormLabel>Deskripsi</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder="Please describe the issue in detail"
+                      placeholder="Harap jelaskan masalah secara detail"
                       className="min-h-[100px]"
                       {...field}
                     />
@@ -188,7 +187,7 @@ const ReportForm = ({
               name="photo"
               render={({ field: { value, onChange, ...field } }) => (
                 <FormItem>
-                  <FormLabel>Photo (Optional)</FormLabel>
+                  <FormLabel>Foto (Opsional)</FormLabel>
                   <div className="flex flex-col items-center gap-4">
                     <div className="grid w-full max-w-sm items-center gap-1.5">
                       <Input
@@ -209,7 +208,7 @@ const ReportForm = ({
                           className="w-full"
                         >
                           <Upload className="mr-2 h-4 w-4" />
-                          Upload Photo
+                          Unggah Foto
                         </Button>
                         <Button
                           type="button"
@@ -241,14 +240,14 @@ const ReportForm = ({
                             form.setValue("photo", undefined);
                           }}
                         >
-                          Remove
+                          Hapus
                         </Button>
                       </div>
                     )}
                   </div>
                   <FormDescription>
-                    Upload a photo of the street light to help maintenance crews
-                    identify the issue.
+                    Unggah foto lampu jalan untuk membantu tim pemeliharaan
+                    mengidentifikasi masalah.
                   </FormDescription>
                   <FormMessage />
                 </FormItem>
@@ -257,7 +256,7 @@ const ReportForm = ({
 
             <div className="pt-2">
               <p className="text-xs text-muted-foreground mb-2">
-                Location: {location.lat.toFixed(6)}, {location.lng.toFixed(6)}
+                Lokasi: {location.lat.toFixed(6)}, {location.lng.toFixed(6)}
               </p>
             </div>
 
@@ -267,9 +266,9 @@ const ReportForm = ({
                 variant="outline"
                 onClick={() => onOpenChange(false)}
               >
-                Cancel
+                Batal
               </Button>
-              <Button type="submit">Submit Report</Button>
+              <Button type="submit">Kirim Laporan</Button>
             </DialogFooter>
           </form>
         </Form>

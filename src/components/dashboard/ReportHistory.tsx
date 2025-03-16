@@ -91,20 +91,20 @@ const ReportHistory = ({
 }: ReportHistoryProps) => {
   return (
     <div className="w-full bg-white rounded-lg shadow-sm p-4">
-      <h2 className="text-xl font-semibold mb-4">Your Report History</h2>
+      <h2 className="text-xl font-semibold mb-4">Riwayat Laporan Anda</h2>
 
       <div className="overflow-x-auto">
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Report ID</TableHead>
-              <TableHead>Light ID</TableHead>
-              <TableHead>Date</TableHead>
-              <TableHead>Location</TableHead>
-              <TableHead>Issue</TableHead>
+              <TableHead>ID Laporan</TableHead>
+              <TableHead>ID Lampu</TableHead>
+              <TableHead>Tanggal</TableHead>
+              <TableHead>Lokasi</TableHead>
+              <TableHead>Masalah</TableHead>
               <TableHead>Status</TableHead>
-              <TableHead>Last Updated</TableHead>
-              <TableHead>Actions</TableHead>
+              <TableHead>Terakhir Diperbarui</TableHead>
+              <TableHead>Tindakan</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -160,7 +160,7 @@ const ReportHistory = ({
           <TableFooter>
             <TableRow>
               <TableCell colSpan={8} className="text-right">
-                Total Reports: {reports.length}
+                Total Laporan: {reports.length}
               </TableCell>
             </TableRow>
           </TableFooter>

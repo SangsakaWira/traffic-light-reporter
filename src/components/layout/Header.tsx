@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { MapPin, Menu, Moon, Sun, User } from "lucide-react";
+import { Menu, Moon, Sun, User } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -37,10 +37,12 @@ const Header = ({
     <header className="w-full h-16 bg-background border-b border-border flex items-center justify-between px-4 md:px-6 sticky top-0 z-50">
       <div className="flex items-center gap-2">
         <Link to="/" className="flex items-center gap-2">
-          <MapPin className="h-6 w-6 text-primary" />
-          <span className="font-bold text-lg hidden md:inline">
-            Street Light Reporter
-          </span>
+          <img
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=LAPORPJU"
+            alt="LAPORPJU Logo"
+            className="h-8 w-auto"
+          />
+          <span className="font-bold text-lg hidden md:inline">LAPORPJU</span>
         </Link>
       </div>
 
@@ -50,26 +52,26 @@ const Header = ({
           to="/"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
-          Map
+          Peta
         </Link>
         <Link
           to="/about"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
-          About
+          Tentang
         </Link>
         <Link
           to="/help"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
-          Help
+          Bantuan
         </Link>
         {isAuthenticated && (
           <Link
             to="/dashboard"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
-            Dashboard
+            Dasbor
           </Link>
         )}
       </nav>
@@ -122,10 +124,10 @@ const Header = ({
         ) : (
           <div className="flex items-center gap-2">
             <Button variant="outline" size="sm" onClick={onLogin}>
-              Login
+              Masuk
             </Button>
             <Button size="sm" onClick={onRegister}>
-              Register
+              Daftar
             </Button>
           </div>
         )}
@@ -143,19 +145,19 @@ const Header = ({
                 to="/"
                 className="text-sm font-medium hover:text-primary transition-colors py-2"
               >
-                Map
+                Peta
               </Link>
               <Link
                 to="/about"
                 className="text-sm font-medium hover:text-primary transition-colors py-2"
               >
-                About
+                Tentang
               </Link>
               <Link
                 to="/help"
                 className="text-sm font-medium hover:text-primary transition-colors py-2"
               >
-                Help
+                Bantuan
               </Link>
               {isAuthenticated ? (
                 <>
@@ -163,29 +165,29 @@ const Header = ({
                     to="/dashboard"
                     className="text-sm font-medium hover:text-primary transition-colors py-2"
                   >
-                    Dashboard
+                    Dasbor
                   </Link>
                   <Link
                     to="/profile"
                     className="text-sm font-medium hover:text-primary transition-colors py-2"
                   >
-                    Profile
+                    Profil
                   </Link>
                   <Link
                     to="/settings"
                     className="text-sm font-medium hover:text-primary transition-colors py-2"
                   >
-                    Settings
+                    Pengaturan
                   </Link>
                   <Button variant="outline" onClick={onLogout} className="mt-2">
-                    Logout
+                    Keluar
                   </Button>
                 </>
               ) : (
                 <div className="flex flex-col gap-2 mt-2">
-                  <Button onClick={onLogin}>Login</Button>
+                  <Button onClick={onLogin}>Masuk</Button>
                   <Button variant="outline" onClick={onRegister}>
-                    Register
+                    Daftar
                   </Button>
                 </div>
               )}

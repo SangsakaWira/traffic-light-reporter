@@ -100,12 +100,12 @@ const AuthModal: React.FC<AuthModalProps> = ({
       <DialogContent className="sm:max-w-[425px] bg-white">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center">
-            {activeTab === "login" ? "Welcome Back" : "Create an Account"}
+            {activeTab === "login" ? "Selamat Datang Kembali" : "Buat Akun"}
           </DialogTitle>
           <DialogDescription className="text-center">
             {activeTab === "login"
-              ? "Sign in to track your street light reports"
-              : "Join the community to report and track street lights"}
+              ? "Masuk untuk melacak laporan lampu jalan Anda"
+              : "Bergabunglah dengan komunitas untuk melaporkan dan melacak lampu jalan"}
           </DialogDescription>
         </DialogHeader>
 
@@ -118,11 +118,11 @@ const AuthModal: React.FC<AuthModalProps> = ({
           <TabsList className="grid grid-cols-2 w-full mb-6">
             <TabsTrigger value="login" className="flex items-center gap-2">
               <User size={16} />
-              Login
+              Masuk
             </TabsTrigger>
             <TabsTrigger value="register" className="flex items-center gap-2">
               <UserPlus size={16} />
-              Register
+              Daftar
             </TabsTrigger>
           </TabsList>
 
@@ -176,21 +176,19 @@ const AuthModal: React.FC<AuthModalProps> = ({
                 />
 
                 <Button type="submit" className="w-full">
-                  Sign In
+                  Masuk
                 </Button>
               </form>
             </Form>
 
             <div className="text-center text-sm">
-              <span className="text-muted-foreground">
-                Don't have an account?{" "}
-              </span>
+              <span className="text-muted-foreground">Belum punya akun? </span>
               <Button
                 variant="link"
                 className="p-0"
                 onClick={() => setActiveTab("register")}
               >
-                Sign up
+                Daftar
               </Button>
             </div>
           </TabsContent>
@@ -288,21 +286,19 @@ const AuthModal: React.FC<AuthModalProps> = ({
                 />
 
                 <Button type="submit" className="w-full">
-                  Create Account
+                  Buat Akun
                 </Button>
               </form>
             </Form>
 
             <div className="text-center text-sm">
-              <span className="text-muted-foreground">
-                Already have an account?{" "}
-              </span>
+              <span className="text-muted-foreground">Sudah punya akun? </span>
               <Button
                 variant="link"
                 className="p-0"
                 onClick={() => setActiveTab("login")}
               >
-                Sign in
+                Masuk
               </Button>
             </div>
           </TabsContent>
