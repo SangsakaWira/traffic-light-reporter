@@ -67,7 +67,7 @@ const Header = ({
           Bantuan
         </Link>
         <Link
-          to="/cari"
+          to="/"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
           Cari
