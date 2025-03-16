@@ -44,10 +44,10 @@ const MapboxMap = ({projects}) => {
                 mapboxApiAccessToken={'pk.eyJ1Ijoic2FuZ3Nha2F3aXJhIiwiYSI6ImNqdXBhajZmeTBudXg0NG50YjdhcDF2amUifQ.NmC56k1T54xEKGmlrFOxRA'}
                 {...viewport}
                 width={"100%"}
-                // onViewportChange={handleViewportChange}
+                onViewportChange={handleViewportChange}
                 scrollZoom={false} // Disable zooming with mouse scroll
                 doubleClickZoom={false} // Disable zooming with double-click
-                onViewportChange={nextViewport => setViewport(nextViewport)}
+                // onViewportChange={nextViewport => setViewport(nextViewport)}
                 mapStyle="mapbox://styles/mapbox/navigation-night-v1"  // You can change th
             >
                 {projects.map(data => {
