@@ -124,20 +124,20 @@ const Home: React.FC = () => {
         ) : (
           <div className="space-y-8">
             <section className="text-center py-12">
-              <h1 className="text-4xl font-bold mb-4">Pelaporan Lampu Jalan Dishub Kota Palembang</h1>
+              <h1 className="text-4xl font-bold mb-4">Sistem Pelaporan PJU Dishub Kota Palembang</h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
                 Bantu jaga keamanan komunitas Anda dengan melaporkan masalah
                 pada lampu jalan.
               </p>
               <div className="flex justify-center gap-4">
                 <Button
-                  size="lg"
+                  size="xl"
                   onClick={handleRegister}
                   className="bg-primary text-white hover:bg-primary/90 px-8"
                 >
-                  Laporkan Lampu Bermasalah
+                  <h2>Laporkan Lampu Bermasalah</h2>
                 </Button>
-                <Button
+                {/* <Button
                   size="lg"
                   variant="outline"
                   onClick={() =>
@@ -145,7 +145,7 @@ const Home: React.FC = () => {
                   }
                 >
                   Lihat Peta
-                </Button>
+                </Button> */}
               </div>
             </section>
 
