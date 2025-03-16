@@ -22,11 +22,14 @@ const MapboxMap = ({projects}) => {
         zoom: 12,
       });
     
-      // Prevent infinite loop by only updating viewport when necessary
       const handleViewportChange = useCallback(
         (nextViewport) => {
           setViewport((prevViewport) => {
-            if (prevViewport.latitude !== nextViewport.latitude || prevViewport.longitude !== nextViewport.longitude || prevViewport.zoom !== nextViewport.zoom) {
+            if (
+              prevViewport.latitude !== nextViewport.latitude ||
+              prevViewport.longitude !== nextViewport.longitude ||
+              prevViewport.zoom !== nextViewport.zoom
+            ) {
               return nextViewport;
             }
             return prevViewport;
@@ -41,7 +44,10 @@ const MapboxMap = ({projects}) => {
                 mapboxApiAccessToken={'pk.eyJ1Ijoic2FuZ3Nha2F3aXJhIiwiYSI6ImNqdXBhajZmeTBudXg0NG50YjdhcDF2amUifQ.NmC56k1T54xEKGmlrFOxRA'}
                 {...viewport}
                 width={"100%"}
-                onViewportChange={handleViewportChange}
+                // onViewportChange={handleViewportChange}
+                scrollZoom={false} // Disable zooming with mouse scroll
+                doubleClickZoom={false} // Disable zooming with double-click
+                onViewportChange={nextViewport => setViewport(nextViewport)}
                 mapStyle="mapbox://styles/mapbox/navigation-night-v1"  // You can change th
             >
                 {projects.map(data => {
