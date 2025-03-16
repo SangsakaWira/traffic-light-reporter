@@ -30,12 +30,12 @@ const Dashboard: React.FC<DashboardProps> = ({
   const [activeTab, setActiveTab] = useState("overview");
 
   return (
-    <div className="container mx-auto p-4 bg-gray-50 min-h-screen">
+    <div className="container mx-auto p-4  min-h-screen">
       <div className="flex flex-col space-y-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <div>
-            <h1 className="text-2xl font-bold">Dasbor</h1>
+            <h1 className="text-2xl font-bold">Semua PJUTS di Kota Palembang</h1>
             <p className="text-gray-500">Selamat datang kembali, {userName}</p>
           </div>
           <Button onClick={onViewMap} className="flex items-center gap-2">

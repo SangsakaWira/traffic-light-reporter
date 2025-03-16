@@ -61,22 +61,28 @@ const Header = ({
           Peta
         </Link>
         <Link
-          to="/about"
+          to="/tentang"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
           Tentang
         </Link>
         <Link
-          to="/help"
+          to="/bantuan"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
           Bantuan
         </Link>
         <Link
-          to="/"
+          to="/search"
           className="text-sm font-medium hover:text-primary transition-colors"
         >
           Cari
+        </Link>
+        <Link
+          to="https://dishub.palembang.go.id"
+          className="text-sm font-medium hover:text-primary transition-colors"
+        >
+          Web Dishub
         </Link>
         {isAuthenticated && (
           <Link
