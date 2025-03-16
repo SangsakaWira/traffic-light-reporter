@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "./layout/Header";
-import MapInterface from "./map/MapInterface";
+import MapboxReact from "./map-box/MapBoxReact";
 import ReportForm from "./reports/ReportForm";
 import Dashboard from "./dashboard/Dashboard";
 import AuthModal from "./auth/AuthModal";
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
       <main className="container mx-auto px-4 py-6">
         {isAuthenticated ? (
           <div className="space-y-8">
-            <MapInterface onLightSelect={handleLightSelect} />
+            <MapboxReact></MapboxReact>
             <Dashboard
               userName={userName}
               onViewMap={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -127,7 +127,7 @@ const Home: React.FC = () => {
               </div>
             </section>
 
-            <MapInterface onLightSelect={handleLightSelect} />
+            <MapboxReact></MapboxReact>
 
             <section className="py-12 text-center">
               <h2 className="text-3xl font-bold mb-6">Cara Kerjanya</h2>
