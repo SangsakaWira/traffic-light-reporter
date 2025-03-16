@@ -1,7 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import ReactMapGL, { FullscreenControl, Marker, Popup } from 'react-map-gl'
 import LightMarker from "./LightMarker";
-import axios from "axios";
 import 'mapbox-gl/dist/mapbox-gl.css'; // Import the Mapbox CSS
 
 type Viewport = {
@@ -13,29 +12,7 @@ type Viewport = {
   };
   
 
-const MapboxMap = () => {
-
-
-    const [projects, setProjects] = useState<any[]>([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
-
-    const fetchData = async () => {
-        try {
-            const response = await axios.get("https://api.sumselprov.info/api/v1/project");
-            console.log(response.data.data)
-            setProjects(response.data.data.Projects || []);
-        } catch (err: any) {
-            setError(err?.message || "Error fetching projects");
-        } finally {
-            setLoading(false);
-        }
-    };
-
-    useEffect(() => {
-        fetchData();
-        console.log("handleViewportChange")
-    }, []);
+const MapboxMap = ({projects}) => {
 
     const [viewport, setViewport] = useState<Viewport>({
         width: '100%',
@@ -68,7 +45,6 @@ const MapboxMap = () => {
                 mapStyle="mapbox://styles/mapbox/navigation-night-v1"  // You can change th
             >
                 {projects.map(data => {
-
                     return (
                         // <Marker longitude={parseFloat(data.longitude)} latitude={parseFloat(data.latitude)} color="red" />
                         <Marker

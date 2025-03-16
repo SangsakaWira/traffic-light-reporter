@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./layout/Header";
 import MapboxReact from "./map-box/MapBoxReact";
 import ReportForm from "./reports/ReportForm";
 import Dashboard from "./dashboard/Dashboard";
 import AuthModal from "./auth/AuthModal";
+import axios from "axios";
 
 const Home: React.FC = () => {
   // State for authentication
@@ -12,10 +13,30 @@ const Home: React.FC = () => {
 
   // State for modals
   const [reportFormOpen, setReportFormOpen] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [projects, setProjects] = useState<any[]>([]);
   const [authModalOpen, setAuthModalOpen] = useState(false);
   const [authModalTab, setAuthModalTab] = useState<"login" | "register">(
     "login",
   );
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("https://api.sumselprov.info/api/v1/project");
+      console.log(response.data.data)
+      setProjects(response.data.data.Projects || []);
+    } catch (err: any) {
+      setError(err?.message || "Error fetching projects");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+    console.log("handleViewportChange")
+  }, []);
 
   // State for selected light
   const [selectedLightId, setSelectedLightId] = useState<string | null>(null);
@@ -92,7 +113,9 @@ const Home: React.FC = () => {
       <main className="container mx-auto px-4 py-6">
         {isAuthenticated ? (
           <div className="space-y-8">
-            <MapboxReact></MapboxReact>
+            <MapStats></MapStats>
+            <MapboxReact projects={projects}></MapboxReact>
+
             <Dashboard
               userName={userName}
               onViewMap={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -127,7 +150,8 @@ const Home: React.FC = () => {
               </div>
             </section>
 
-            <MapboxReact></MapboxReact>
+            <MapStats></MapStats>
+            <MapboxReact projects={projects}></MapboxReact>
 
             <section className="py-12 text-center">
               <h2 className="text-3xl font-bold mb-6">Cara Kerjanya</h2>
@@ -197,4 +221,5 @@ export default Home;
 
 // Import missing components
 import { Button } from "./ui/button";
-import { MapPin, AlertTriangle, Bell } from "lucide-react";
+import { MapPin, AlertTriangle, Bell } from "lucide-react"; import MapStats from "./map/MapStats";
+
